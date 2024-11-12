@@ -53,10 +53,10 @@ public class BoardService1 {
                if( content1 != null) { //만약에 첫번째 게시물이 존재하면
                    System.out.printf("작성자 : %s , 내용 : %s,", writer1, content1);
                }
-               if( content1 != null) { //만약에 두번째 게시물이 존재하면
+               if( content2 != null) { //만약에 두번째 게시물이 존재하면
                     System.out.printf("작성자 : %s , 내용 : %s,", writer2, content2);
                 }
-               if( content1 != null) { //만약에 셋번째 게시물이 존재하면
+               if( content3 != null) { //만약에 셋번째 게시물이 존재하면
                     System.out.printf("작성자 : %s , 내용 : %s,", writer3, content3);
                 }
             }
