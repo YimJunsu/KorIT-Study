@@ -63,4 +63,4 @@ public class BoardService1 {
         } //무한루프
 
     } // main end
-} //class end
+} //class endd
