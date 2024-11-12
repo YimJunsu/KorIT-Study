@@ -60,6 +60,9 @@ public class BoardService1 {
                     System.out.printf("작성자 : %s , 내용 : %s,", writer3, content3);
                 }
             }
+            else { // 반복 종료
+            break;
+            }
         } //무한루프
 
     } // main end
