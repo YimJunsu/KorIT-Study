@@ -61,6 +61,5 @@ public class BoardService1 {
                 }
             }// 반복 종료
         } //무한루프
-
     } // main end
 } //class end
