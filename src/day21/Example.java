@@ -1,5 +1,5 @@
 package day21;
 
 public class Example {
-    //깃
+    //깃허브 테스트
 }
