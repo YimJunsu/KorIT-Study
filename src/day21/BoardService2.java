@@ -48,7 +48,7 @@ public class BoardService2 {
             if (choose == 2) {
                 for (int index = 0; index <= content.length - 1; index++) { // 0~99까지
                     if(content[index] != null) { // 만약에 index번째 게시물이 존재하면
-                        System.out.printf(": %s, : %s \n", writer[index], content[index]);
+                        System.out.printf("작성자: %s, 내용: %s \n", writer[index], content[index]);
                     } // if end
                 }//for end
             }//if end

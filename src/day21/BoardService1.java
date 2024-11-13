@@ -30,7 +30,7 @@ public class BoardService1 {
         //if ~ else if : 다중 조건의 무조건 1개 결과를 충족한다.
 
         while(true) {
-            System.out.println("1. 게시물쓰기 2. 게시물출력 선택 : "); //출력
+            System.out.println("[1. 게시물쓰기] [2. 게시물출력] 선택 : "); //출력
             int choose = scan.nextInt(); // 입력
             if(choose == 1) { // 만약에 입력한 값이 1이면 게시물 쓰기 구현
                 // 게시물을 저장할 내용 입력 받기
@@ -53,10 +53,10 @@ public class BoardService1 {
                if( content1 != null) { //만약에 첫번째 게시물이 존재하면
                    System.out.printf("작성자 : %s , 내용 : %s,", writer1, content1);
                }
-               if( content1 != null) { //만약에 두번째 게시물이 존재하면
+               if( content2 != null) { //만약에 두번째 게시물이 존재하면
                     System.out.printf("작성자 : %s , 내용 : %s,", writer2, content2);
                 }
-               if( content1 != null) { //만약에 셋번째 게시물이 존재하면
+               if( content3 != null) { //만약에 셋번째 게시물이 존재하면
                     System.out.printf("작성자 : %s , 내용 : %s,", writer3, content3);
                 }
             }
