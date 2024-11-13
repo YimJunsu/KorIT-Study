@@ -59,8 +59,7 @@ public class BoardService1 {
                if( content3 != null) { //만약에 셋번째 게시물이 존재하면
                     System.out.printf("작성자 : %s , 내용 : %s,", writer3, content3);
                 }
-            }
+            }// 반복 종료
         } //무한루프
-
     } // main end
 } //class end
