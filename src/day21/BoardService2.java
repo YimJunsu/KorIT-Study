@@ -17,8 +17,8 @@ public class BoardService2 {
         Scanner scan = new Scanner(System.in);
             // 배열 변수 사용이유 : 여러개의 변수에 있는 데이터를 배열로 사용하면 관리가 편하다.
 
-        String[] content = new String[100]; // 배열 선언하는 방법 : 타입[] 변수명 = new 타입[개수];
-        String[] writer = new String[100]; // String 데이터 100개를 저장할 수 있는 배열 선언
+        String[] contents = new String[100]; // 배열 선언하는 방법 : 타입[] 변수명 = new 타입[개수];
+        String[] writers = new String[100]; // String 데이터 100개를 저장할 수 있는 배열 선언
 
         while (true) { // while start
             System.out.println("1. 게시물쓰기 2. 게시물출력 선택 : ");
@@ -32,10 +32,10 @@ public class BoardService2 {
                 //인데스 0부터 마지막 인덱스 99까지 1씩 증가
                     // 스위치 변수 = 상태 저장하는 변수
                 boolean save = false; // 처음에는 false 해서 저장 실패 했는 뜻
-                for (int index = 0; index <= content.length - 1; index++) {
-                    if (content[index] == null) { // 만약에 index번째 게시물이 비어있으면
-                        content[index] = cont;
-                        writer[index] = writ; // 비어 있는 게시물의 입력받은 내용물 정장
+                for (int index = 0; index <= contents.length - 1; index++) {
+                    if (contents[index] == null) { // 만약에 index번째 게시물이 비어있으면
+                        contents[index] = cont;
+                        writers[index] = writ; // 비어 있는 게시물의 입력받은 내용물 정장
                         save = true; // 만약에 저장 성공 했으면 save 변수에 true 값으로 변경
                         break; // 만약에 저장을 했으면 1개 저장해야 하므로 break 해서 반복문 종료
                     } // if end
@@ -46,9 +46,9 @@ public class BoardService2 {
             } // if end
 
             if (choose == 2) {
-                for (int index = 0; index <= content.length - 1; index++) { // 0~99까지
-                    if(content[index] != null) { // 만약에 index번째 게시물이 존재하면
-                        System.out.printf(": %s, : %s \n", writer[index], content[index]);
+                for (int index = 0; index <= contents.length - 1; index++) { // 0~99까지
+                    if(contents[index] != null) { // 만약에 index번째 게시물이 존재하면
+                        System.out.printf(": %s, : %s \n", writers[index], contents[index]);
                     } // if end
                 }//for end
             }//if end
