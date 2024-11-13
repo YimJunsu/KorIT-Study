@@ -21,7 +21,7 @@ public class BoardService2 {
         String[] writers = new String[100]; // String 데이터 100개를 저장할 수 있는 배열 선언
 
         while (true) { // while start
-            System.out.println("1. 게시물쓰기 2. 게시물출력 선택 : ");
+            System.out.println("1. 게시물 쓰기 2. 게시물 출력 선택 : ");
             int choose = scan.nextInt();
             if (choose == 1) {
                 // 입력 받기
