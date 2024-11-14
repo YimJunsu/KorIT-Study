@@ -16,9 +16,6 @@
        */
 package day22;
 
-import day22.Board;
-import day22.NewBoard;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
