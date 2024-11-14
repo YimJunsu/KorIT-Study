@@ -29,4 +29,9 @@ public class NewBoard {
     public void setContent(String content) {
         this.content = content;
     }
+
+    @Override
+    public String toString() {
+        return "작성자: " + writer + "내용: " + content;
+    }
 }
