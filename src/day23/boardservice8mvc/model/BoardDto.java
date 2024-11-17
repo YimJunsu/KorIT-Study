@@ -5,11 +5,14 @@ public class BoardDto {
     private String writer;
     private int pwd;
     BoardDto( ){ }
+    //생성자 1개 일 때
     public BoardDto(String content) {this.content = content;}
+    //생성자 2개 일 때
     public BoardDto(String content, String writer) {
         this.content = content;
         this.writer = writer;
     }
+    //생성자 3개일 때
     public BoardDto(String content, String writer, int pwd) {
         this.content = content;
         this.writer = writer;
