@@ -4,7 +4,6 @@ import day23.Board;
 import day23.boardservice8mvc.model.BoardDao;
 import day23.boardservice8mvc.model.BoardDto;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class BoardController {
