@@ -17,8 +17,7 @@
     - 파일 입출력과 관련된 클래스 / 인터페이스
     - 사용 이유 : 자바에서 다루는 데이터를 영구저장 하기 위해서 자바 외부에 저장하는 기술
 
-    1. (C)FileOutputStream 객체변수명 = new FileOutPutStream(파일경로),
-    일반 예외(예외 필수)
+    1. (C)FileOutputStream 객체변수명 = new FileOutPutStream(파일경로), 일반 예외(예외 필수)
         1. .write( 출력할바이트배열 ) : 현재 연동된 파일에 쓰기(출력)하는 함수
     2. (C)FileInputStream 객체변수명 = new FileInputStream( 파일경로), 일반 예외(예외 필수)
         .read( 바이트 배열 ) - 현재 연동된 파일에 바이트단위로 데이터를 읽어오는 함수
