@@ -98,6 +98,7 @@ public class BoardDao {
             inputStream.read(bytes);
             // [4] 읽어온 바이트 배열을 문자열(String)으로 변환
             String inStr = new String( bytes );
+
             // 활용과제 : 파일로 부터 읽어온 문자열의 게시물 정보들을 다시 ArrayList<BoardDto> boardDB 에 저장하시오.
             // 목표 : 파일로 가져온 문자열내 저장된 여러개 게시물들을 객체화 하고 게시물객체를 리스트에 담자.
             // "안녕하세요,유재석,1234\n그래안녕,강호동,4567"
