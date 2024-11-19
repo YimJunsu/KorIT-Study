@@ -27,6 +27,7 @@ import java.util.ArrayList;
         point2 : 객체간의 구분을 \n으로 한다.
             예] 만일 게시물 2개일때 "안녕하세요,유재석,1234\n그래안녕,강호동,4567"
  */
+
 public class BoardDao {
     // 싱글톤
     private static BoardDao boardDao = new BoardDao();
