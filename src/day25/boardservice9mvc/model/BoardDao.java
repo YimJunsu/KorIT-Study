@@ -105,7 +105,7 @@ public class BoardDao {
             // inStr = "안녕하세요,유재석,1234\n그래안녕,강호동,4567\n"
             // inStr.split("\n")  -> [ "안녕하세요,유재석,1234" , "그래안녕,강호동,4567" ]
             String[] objStr = inStr.split("\n");
-            // [2] 객체내 필드 구분 문자(,:쉼표)
+            // [2] 객체내 필드 구분 문자(, : 쉼표)
             for( int i = 0 ; i <= objStr.length - 1 ; i++ ){ // 마지막 줄 제외를 하기 위해 -1
                 String obj = objStr[i]; // [3] 1개의 객체 필드 값들 가져오기
                 //  objStr = [ "안녕하세요,유재석,1234" , "그래안녕,강호동,4567" ]
