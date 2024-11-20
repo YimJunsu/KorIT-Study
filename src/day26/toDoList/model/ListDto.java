@@ -11,6 +11,9 @@ public class ListDto {
         this.isFinished = false;
     }
 
+    public ListDto(String content, String deadLine, int i) {
+    }
+
     public String getContent() {
         return content;
     }

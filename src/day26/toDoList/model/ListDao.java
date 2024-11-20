@@ -50,7 +50,22 @@ public class ListDao {
 
             String[] field = inStr.split("%n");
 
+            String[] row = inStr.split("\n");
 
+            // 임시로 저장할 게시물 리스트 배열 선언
+            ArrayList<ListDto> list = new ArrayList<>();
+
+            for(int i=0 ; i<row.length; i++){
+                // 각 줄을 ,쉼표 단위로 나눠서 데이터의 배열로 변환
+                String[] arr = row[i].split(",");
+                // 한 줄의 데이터들로 임시 객체 생성
+                ListDto board= new ListDto(arr[0],arr[1],Integer.parseInt(arr[2]));
+                // 객체를 임시 배열에 저장
+                list.add(board);
+            } // for end
+
+            // 데이터베이스에 임시 배열을 대입
+            listDB=list;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
