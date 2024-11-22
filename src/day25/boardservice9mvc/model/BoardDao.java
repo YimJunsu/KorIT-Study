@@ -32,21 +32,13 @@ public class BoardDao {
     private static BoardDao boardDao = new BoardDao();
     private BoardDao(){
 
-        // 만약에 파일을 로드 하는데.. 파일이 존재하지 않으면
             // [1] 파일 경로에 따른 파일 객체화
         File file = new File("./src/day25/boardservice9mvc/data.txt");
             // [2] 객체화 한 파일이 존재 하는지 확인
-        if( file.exists() ) { // 지정한 경로의 파일이 있다.
             // - 싱글톤(static) 이 생성될때( 프로그램이 실행될때 )
-            fileLoad();
-        } else { // 지정한 경로의 파일이 없다.
-            // .createNewFile() : 파일 생성
-            try {file.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-    }
     public static BoardDao getInstance(){
         return boardDao;
     }
@@ -97,7 +89,6 @@ public class BoardDao {
             inputStream.read(bytes);
             // [4] 읽어온 바이트 배열을 문자열(String)으로 변환
             String inStr = new String( bytes );
-
             // 활용과제 : 파일로 부터 읽어온 문자열의 게시물 정보들을 다시 ArrayList<BoardDto> boardDB 에 저장하시오.
             // 목표 : 파일로 가져온 문자열내 저장된 여러개 게시물들을 객체화 하고 게시물객체를 리스트에 담자.
             // "안녕하세요,유재석,1234\n그래안녕,강호동,4567"
@@ -122,9 +113,7 @@ public class BoardDao {
                 // [5] 리스트에 담기
                 boardDB.add( boardDto );
             }
-
         }catch ( FileNotFoundException e ){ e.printStackTrace();}
-
         catch ( IOException e ){ e.printStackTrace(); }
     }
 }

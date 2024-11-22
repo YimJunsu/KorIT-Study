@@ -1,8 +1,7 @@
-package day23.boardservice8mvc.controller;
+package day25.boardservice9mvc.controller;
 
-import day23.Board;
-import day23.boardservice8mvc.model.BoardDao;
-import day23.boardservice8mvc.model.BoardDto;
+import day25.boardservice9mvc.model.BoardDao;
+import day25.boardservice9mvc.model.BoardDto;
 
 import java.util.ArrayList;
 

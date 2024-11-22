@@ -1,4 +1,4 @@
-package day23.boardservice8mvc.model;
+package day25.boardservice9mvc.model;
 
 public class BoardDto {
     private String content;

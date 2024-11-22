@@ -5,6 +5,11 @@ public class NewBoard {
     private String writer;
     private int pwd;
 
+    public NewBoard(String content, String writer, int pwd) {
+        this.content = content;
+        this.writer = writer;
+        this.pwd = pwd;
+    }
 
     public int getPwd() {
         return pwd;
