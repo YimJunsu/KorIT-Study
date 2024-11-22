@@ -1,6 +1,6 @@
-package day25.boardservice9mvc;
+package day29.boardservice10mvc;
 
-import day25.boardservice9mvc.view.BoardView;
+import day29.boardservice10mvc.view.BoardView;
 
 public class AppStart {
     public static void main(String[] args) {

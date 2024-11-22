@@ -1,5 +1,5 @@
-package day25.boardservice9mvc.model;
-
+package day29.boardservice10mvc.model;
+//DTO 의 T -> transfor 이동 담당
 public class BoardDto {
     private String content;
     private String writer;

@@ -1,6 +1,6 @@
-package day25.boardservice9mvc.view;
-import day25.boardservice9mvc.controller.BoardController;
-import day25.boardservice9mvc.model.BoardDto;
+package day29.boardservice10mvc.view;
+import day29.boardservice10mvc.controller.BoardController;
+import day29.boardservice10mvc.model.BoardDto;
 
 import java.util.ArrayList;
 import java.util.Scanner;
