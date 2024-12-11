@@ -1,0 +1,24 @@
+.제목구역{
+    font-family: "굴림", "궁서";
+    text-align: center;
+    text-shadow: 1px 1px 4px black;
+}
+.날짜구역{
+    color: darkgrey;
+    font-size: 12px;
+    text-align: right;
+    line-height: 400%;
+    
+}
+.내용구역{
+    font-size: 14px;
+    line-height: 180%;
+    
+}
+
+.하단구역{
+    font-family: "고딕";
+    font-size: 12px;
+    line-height: 130%;
+    
+}
