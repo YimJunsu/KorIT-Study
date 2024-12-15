@@ -1,0 +1,25 @@
+.box1{
+    color: white;
+    line-height: 100%;
+    background-color: teal;
+    width: 500px;   /* 구역의 가로크기 */
+    padding-top: 5px;  /* 안쪽 위쪽 여백 */
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+
+    margin-top: 0px;
+}
+
+.box2{
+    color: white;
+    line-height: 100%;
+    background-color: teal;
+    width: 500px;   /* 구역의 가로크기 */
+    padding-top: 5px;  /* 안쪽 위쪽 여백 */
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+
+    margin-top: 0px;
+}

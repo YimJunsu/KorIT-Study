@@ -1,0 +1,96 @@
+[CSS]
+    - C(Cascading) S(Style) S(Sheets)
+        - Cascading : 위에서 아래로 쏟아진다는 뜻
+        - Style : 형태 , 꼴 , 모양 뜻 
+        - Sheets :  씌우는 천/막/면
+    1. 위에서 아래로 모양을 꾸미기 시트를 덮는다.
+    2. 주로 HTML언어를 꾸미는 목적으로 사용된다.
+    3. CSS는 (HTML)종속형 스타일 언어 , 즉] HTML안에서 같이 사용되는 언어
+    4. HTML에서 CSS 적용하는 방법
+        
+        방법1 : <마크업 style="값"> , 선택자가 없다.
+            - 적용할 마크업에 style 속성를 이용하여 css속성값을 대입한다.
+            - <마크업 style="속성명:속성값">
+
+        방법2 : <head> 마크업에 <style> 마크업을 사용하는 방법 
+            <head>
+                <style>
+                    선택자{ 속성명 : 속성값; }
+                </style>
+            </head>
+
+        방법3 : <head> 마크업에 <link> 마크업을 이용한 css 파일 불러오기 *권장*
+            <head>
+                <link rel="stylesheet" href="css파일경로(확장자포함)" />
+            </head>
+
+
+[ CSS 파일 만들기 ]
+    1. 생성할 CSS파일의 위치폴더를 오른쪽클릭 -> [new]
+    2. css 파일명을 입력후 생성한다. (*확장자 포함)
+
+[ CSS 기본문법 ]
+   선택자{ 속성명 : 속성값; 속성명2 : 속성값2; }
+
+[ 선택자 ] 
+    - 꾸미기할 대상을 선택하는 연산자.
+    1. 종류
+        1. *{ 속성명 : 속성값; }
+        2. 마크업명{ 속성명 : 속성값; }
+        3. .클래스명{ 속성명 : 속성값; }
+        4. #아이디명{ 속성명 : 속성값; }
+    
+    2. 속성명이 중복일때 적용 우선순위 
+        - 1순위:#아이디  2순위 : .클래스 3순위 : 마크업 4순위 : *
+        - 선택자가 동일한 경우는 작성순으로 아래에 있는 속성명이 최종 적용된다.
+    
+[ 속성명 ]
+    - css언어가 제공하는 꾸미기 이름
+    - 사용가능한 속성명 과 속성값은 정해져 있다.
+    - 종류 
+        1. color : 색상명;      : 글꼴 색상 
+        2. font-size : 크기px;  : 글꼴 크기 
+
+[ 텍스트 관련 속성 ]
+    1. font-family : "글꼴";
+    2. font-size: : 글꼴 크기px;
+    3. font-style : italic;                 :폰트 기울기
+    4. font-weight : bold;                  :폰트 진하게
+    5.color : (영문)색상명;                  :글꼴 색상
+    6. word-spacing : 크기px ;               :단어 간격, 어간
+    7. letter-spacing : 크기px ;              :글자 간격, 자간
+    8. line-height : 배율%;                   :줄간격, 기본값 150;
+    9. text-align : left , right , center;   :구역내 내용물 가로 정렬
+    10. text-decoration : 줄종류;             :내용물 줄 긋기
+     underline : 밑줄 overline : 윗줄 line-through : 취소선    
+     11. text-shadow : x축 y축 흐림정도 색상 : 글꼴 그림자
+    
+[ 박스 관련 속성 ]
+    1. border : 선굵기px 선종류 선색상           : 테두리
+        - 선종류 : solid실선, dorred점선, dashed 파선, double(이중선)
+        - border-top, border-right, border-bottom, border-left
+    2. border-radius : 크기px;                  : 둥근 모서리
+    3. box-shadow : x축 y축 흐림정도 색상;       : 박스 그림자
+    4. weight : 크기px;                         : 구역 가로 사이즈
+    5. height : 크기px;                         : 구역 세로 사이즈
+    6. margin : 크기px;                         : 바깥여백, 테두리와 근접한 구역 사이 여백
+    7. padding : 크기px;                        : 안쪽여백, 테두리와 내용물 사이 여백
+        - margin : 0 auto; : ***구역 가운데 정렬***
+    8. background-color : 색상                  : 구역 배경색
+
+[ display 속성 ]
+    - 마크업들을 배치 하는 방법 정의하는 속성
+    - 종류 : 
+        1. block            : 지정한 마크업이 한줄을 차지하는 배치 방법
+            - 대표 마크업 : div, h, p, ul, li 등등
+            - width/height 적용 가능, margin/padding 적용가능
+            
+        2. inline           : 지정한 마크업이 한줄에 포함되는 배치 방법
+            - 대표 마크업 : span, a 등등
+            - width/height 불불가능, margin/padding 좌/우 가능
+
+        3. inline-block  : 지정한 마크업이 한줄에 포함되는 배치 방법
+            - 대표 마크업 : input, button 등등
+            - width/height 적용 가능, margin/padding 적용가능
+
+        4. none             : 지정한 마크업을 표시안함/숨기기

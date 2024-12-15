@@ -1,0 +1,68 @@
+/* CSS 주석 */
+/* 마크업 1개당 1개의 구역을 갖는다. */
+
+
+/* 1. 전체 선택자 */
+*{
+    /*구역 테두리 : 선굵기 -> 선종류 -> 선색상*/
+    border: 1px solid red;
+}
+
+/* 2. 마크업 선택자 */
+html {border: 3px solid yellow;}
+
+body {border: 5px solid blue;}
+
+/* 3. .클래스 선택자 */
+.box1{
+    border: 4px solid pink;
+}
+
+.box2{
+    /* 선 종류 : solid실선, dorred점선, dashed 파선*/
+
+    border-top: 1px solid orange;
+    border-right: 2px dotted skyblue;
+    border-bottom: 3px dashed black;
+    border-left: 4px double green;
+
+    border-radius: 10px;    /*둥근 모서리*/
+
+    /* x축 y축 흐림정도 색상*/
+    box-shadow: 3px 3px 3px orange; /* 구역 그림자 */
+    text-align: center; /* 구역내 내용들이 가로 가운데 정렬 */
+    width: 400px; /* 구역의 가로 사이즈 */
+    height: 300px; /* 구역의 세로 사이즈 */
+}
+
+.box3{
+    padding: 50px; /*(안쪽여백) 테두리와 구역내 내용물의 사이 여백*/
+    margin: 30px; /*(바깥여백) 테두리와 다른 구역의 사이 여백*/
+}
+
+.box4{
+    width: 100px;   /* 구역의 가로크기 */
+    padding-top: 10px;  /* 안쪽 위쪽 여백 */
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px; 
+
+    margin-top : 40px;  /* 위쪽 바깥 여백 */
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+    /* 크롬/인터넷에서 css를 확인하는 방법 : 크롬 f12(개발자도구) */
+
+    background-color: skyblue; /* 구역의 배경색 */
+}
+
+.box5{
+    /* 구역 가로 가운데 정렬, 주의할점 width 100%일때 불가능. */
+    width: 300px;       /* width 생략시 기본값으로 100% 적용된다. */
+    margin: 0 auto;     /* 지정한 선택자의 구역을 가로 가운데 정렬 */
+    text-align: center; /* 지정한 선택자의 구역내 내용물을 가로 가운데 정렬 */
+}
+
+#block1{background-color: red;}
+#block2{background-color: pink;}

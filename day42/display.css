@@ -1,0 +1,42 @@
+/* 확인용 */
+*{border: 1px solid red;}
+
+/* span 마크업 -> inline이 기본값 */
+.s1{
+
+    /* inline 속성은 한줄 포함 */
+    display: inline;
+    /* inline 은 가로/세로 사이즈 적용 불가능 */
+    width: 100px; height: 100px;
+
+    /* inline은 바깥 여백이 위/아래래 적용 불가능*/
+    margin: 20px; /* 바깥 여백 */
+
+    /* inline은 안쪽 여백이 위/아래 적용 불가능*/
+    padding: 10px; /* 안쪽 여백 */
+}
+
+.s2{
+    /* block 속성은 한줄 차지 */
+    display: block;
+    /* block 가로/세로 사이즈 적용 가능 */
+    width: 100px; height: 100px;
+    /* block 바깥여백 적용 가능 */
+    margin: 20px ;
+    /* block 안쪽여백 적용 가능 */
+    padding: 10px;
+}
+
+.s3{
+    /* inline-block 속성값은 inline과 block 합친것 */
+    display: inline-block;
+    /* inline-block은 가로/세로 사이즈 적용 */
+    width: 100px; height: 100px;
+    /* inline-block 안쪽/바깥 여백 적용 가능 */
+    margin: 20px;
+    padding: 10px;
+}
+
+.s4{
+    display: none; /*none속성값은 표시 안함(숨기기)*/
+}
