@@ -76,4 +76,4 @@ function arrOrderBy(arr){
 }
 
 let array3 = [1100, 1500, 2100, 1700];
-console.log(arrOrderBy(array3));
+console.log(arrOrderBy(array3)); 

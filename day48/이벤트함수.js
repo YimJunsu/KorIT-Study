@@ -25,7 +25,7 @@ function func2(){
     let value = example1.value;
     // (3) 확인
     console.log(`현재 input마크업 value : ${value}`);
-}
+} 
 
 // //[3] button(Login) 클릭시 실행되는 함수 정의/만들기
 function login(){

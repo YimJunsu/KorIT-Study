@@ -16,7 +16,7 @@ function 함수1차(a, b, c) {
     return result;
 }
 
-// [4] 1차함수 실행하기
+// [4] 1차함수 실행하기 
 let result2 = 함수1차(3,2,7);
 console.log(result2);
 
@@ -28,7 +28,7 @@ function mixFunc(fruit){
 // [6] 믹서기 함수 사용하기
 console.log(mixFunc('바나나'));
 console.log(mixFunc(`딸기`));
-
+ 
 //[실습] promt() 함수로 두개의 점수를 입력받아, 덧셈 함수에 입력받은 값을 전달 결과 출력
 let value1 = Number(prompt("숫자 1번 입력"));
 let value2 = Number(prompt('숫자 2번 입력'));
