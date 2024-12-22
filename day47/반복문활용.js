@@ -119,3 +119,6 @@ exampleDIV3객체.innerHTML = studentHTML;    // -js에서 구성한 HTML코드�
 - 입력조건 : prompt()함수 출력 
 - 출력조건 : 특정 div에 입력받은 로또 번호 6개를 출력하기.
 */
+// [문제4]
+
+let 
