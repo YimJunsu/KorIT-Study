@@ -1,0 +1,41 @@
+<!-- 실습1 : TODOLIST 구현 하기 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' href='DOM객체활용.css'>
+</head>
+<body>
+    <div id="wrap"> <!-- 전체를 감싼 레이아웃/구역 마크업 -->
+        <h1 class="title">나만의 할일 목록</h1> <!-- 간단한 제목 -->
+        <div class="todoTop"> <!-- 상단 구역 -->
+            <input class="contInput" type="text" />
+            <button onclick="등록함수()" class="addBtn" > 등록 </button>
+        </div> <!-- 상단 end -->
+        <div class="todoBottom"> <!-- 본문 구역 -->
+            <div class="contBox"> <!-- 하나의 컨텐츠 구역-->
+                <div class="cont"> 1교시 수업 듣기 </div>
+                <div class="contBtns">
+                    <button class="updateBtn"> 수정 </button>
+                    <button class="deleteBtn"> 삭제 </button>
+                </div>
+            </div> <!-- 하나의 컨텐츠 end -->
+            <div class="contBox success"> <!-- 하나의 컨텐츠 구역-->
+                <div class="cont"> 여행준비 하기 </div>
+                <div class="contBtns">
+                    <button class="updateBtn"> 수정 </button>
+                    <button class="deleteBtn"> 삭제 </button>
+                </div>
+            </div> <!-- 하나의 컨텐츠 end -->
+
+        </div> <!-- 본문 end -->
+        
+    </div> <!-- 전체 end -->
+    <script src='DOM객체활용.js'></script>
+
+</body>
+</html>
