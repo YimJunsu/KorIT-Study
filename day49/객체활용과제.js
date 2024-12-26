@@ -21,6 +21,15 @@ function signUp(){
         } 
     } //for end
 
+        if(pw.length < 5 || pw.length > 10) { // 비밀번호 길이이
+            alert("비밀번호를 5~10자 사이로 해주세요");
+            signid.value = '';
+            signpw.value = '';
+            signnic.value = '';
+            return;
+        }
+
+
     
         
     let memberDto = {id:id, pw:pw, nicname:nicname}; console.log(memberDto);
