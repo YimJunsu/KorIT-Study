@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Locale;
 
 @Component
 public class WaitingDao {
@@ -38,20 +39,20 @@ public class WaitingDao {
     //출력
     public ArrayList<WaitingDto> view() {
         ArrayList<WaitingDto> list=new ArrayList();
+        ArrayList<WaitingDto> list = new ArrayList();
         try {
             String sql = "select * from user";
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-//            while(rs.next()){
-//                WaitingDto waitingDto = new WaitingDto(
-//                        rs.getInt("wno"),
-//                        rs.getString("name"),
-//
-//                );
-//            }
-        } catch (Exception e) {
+            while(rs.next()){
+                WaitingDto waitingDto = new WaitingDto(
+                        rs.getInt("wno"),
+                        rs.getString("name"),
+                        rs.getString("people"),
+                        rs.getString("phnum"),
+                        rs.getBoolean("status")
+                );list.add(waitingDto);}
+        } catch (Exception e) {System.err.println(e);}
+        return list;}
 
-        }
-    return list;
-    }
 }

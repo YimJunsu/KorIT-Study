@@ -3,6 +3,7 @@ package waitingproject.service;
 import model.dao.WaitingDao;
 import model.dto.WaitingDto;
 import waitingproject.model.dao.WaitingDao;
+import waitingproject.model.dto.WaitingDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ public class WaitingService {
         return result;
     }
 
+    //출력
     public ArrayList<WaitingDto> view(){
         return waitingDao.view();
     }
