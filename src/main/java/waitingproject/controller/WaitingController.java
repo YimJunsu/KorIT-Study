@@ -25,7 +25,6 @@ public class WaitingController {
     //출력
     @GetMapping("/viewall.do")
     public ArrayList<WaitingDto> view(){
-    public ArrayList<WaitingDto> view() {
         return waitingService.view();
     }
 

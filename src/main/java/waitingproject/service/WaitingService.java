@@ -1,7 +1,6 @@
 package waitingproject.service;
 
-import model.dao.WaitingDao;
-import model.dto.WaitingDto;
+
 import waitingproject.model.dao.WaitingDao;
 import waitingproject.model.dto.WaitingDto;
 import org.springframework.beans.factory.annotation.Autowired;

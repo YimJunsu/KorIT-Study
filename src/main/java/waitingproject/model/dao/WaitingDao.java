@@ -8,7 +8,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Locale;
 
 @Component
 public class WaitingDao {
@@ -38,7 +37,6 @@ public class WaitingDao {
     }
     //출력
     public ArrayList<WaitingDto> view() {
-        ArrayList<WaitingDto> list=new ArrayList();
         ArrayList<WaitingDto> list = new ArrayList();
         try {
             String sql = "select * from user";
