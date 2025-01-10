@@ -9,15 +9,20 @@ import waitingproject.service.WaitingService;
 public class WaitingController {
     @Autowired WaitingService waitingService;
 
-//    //등록
-//    @PostMapping("/register.do")
-//    public boolean register(@RequestBody WaitingDto waitingDto){
-//        boolean result = waitingService.register(waitingDto);
-//        return result;
-//    }
-//
-//    @GetMapping("/view.do")
-//    public ArrayList<WaitingDto> view(){
-//
-//    }
+    //등록
+    @PostMapping("/register.do")
+    public boolean register(@RequestBody WaitingDto waitingDto){
+        boolean result = waitingService.register(waitingDto);
+        return result;
+    }
+
+    //출력
+    @GetMapping("/view.do")
+    public ArrayList<WaitingDto> view(){
+        return waitingService.view();
+    }
+    
+    //수정
+
+    //삭제
 }
