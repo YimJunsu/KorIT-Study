@@ -1,4 +1,4 @@
-package model.dto;
+package waitingproject.model.dto;
 
 import lombok.*;
 

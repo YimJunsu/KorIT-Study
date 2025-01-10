@@ -1,4 +1,4 @@
-package model.dao;
+package waitingproject.model.dao;
 
 import org.springframework.stereotype.Component;
 
