@@ -22,4 +22,19 @@ public class WaitingService {
     public ArrayList<WaitingDto> view(){
         return waitingDao.view();
     }
+
+    
+    public int waitingNum() {
+        // status가 0인 레코드들의 리스트의 사이즈를 반환
+        int num = waitingDao.waitingNum().size();
+        return num;
+    }
+
+    public boolean pass(int wno) {
+        return waitingDao.pass(wno);
+    }
+
+    public boolean delete(int wno) {
+        return waitingDao.delete(wno);
+    }
 }

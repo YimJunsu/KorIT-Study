@@ -14,4 +14,8 @@ public class WaitingDto {
     private String people;
     private String phnum;
     private boolean status;
+
+    public WaitingDto(int wno) {
+        this.wno = wno;
+    }
 }

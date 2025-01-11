@@ -2,10 +2,7 @@ package waitingproject.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import waitingproject.model.dto.WaitingDto;
 import waitingproject.service.WaitingService;
 
@@ -28,7 +25,21 @@ public class WaitingController {
         return waitingService.view();
     }
 
-    //수정
+    //남은 대기 번호
+    @GetMapping("/waitingnum.do")
+    public int waitingNum(){
+        return waitingService.waitingNum();
+    }
+
+    //상태 변경
+    @PutMapping("/pass.do")
+    public boolean pass(@RequestParam int wno){
+        return waitingService.pass(wno);
+    }
 
     //삭제
+    @DeleteMapping("/delete.do")
+    public boolean delete(@RequestParam int wno){
+        return waitingService.delete(wno);
+    }
 }

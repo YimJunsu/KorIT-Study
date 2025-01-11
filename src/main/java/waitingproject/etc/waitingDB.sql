@@ -12,7 +12,5 @@ create table user(
     primary key(wno)
 );
 
-insert into user (name,people,phnum) values ('홍길동','4','01012341234');
-
 select * from user;
-drop table user;
+# drop table user;
