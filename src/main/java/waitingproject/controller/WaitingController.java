@@ -17,12 +17,15 @@ public class WaitingController {
     public boolean register(@RequestBody WaitingDto waitingDto){
         boolean result = waitingService.register(waitingDto);
         return result;
+
     }
 
     //출력
     @GetMapping("/viewall.do")
-    public ArrayList<WaitingDto> view(){
-        return waitingService.view();
+    public ArrayList<WaitingDto> view() {
+        System.out.println("controller debug");
+        ArrayList<WaitingDto> view= waitingService.view();
+        return view;
     }
 
     //남은 대기 번호

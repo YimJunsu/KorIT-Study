@@ -20,7 +20,9 @@ public class WaitingService {
 
     //출력
     public ArrayList<WaitingDto> view(){
-        return waitingDao.view();
+        ArrayList<WaitingDto> view = waitingDao.view();
+        System.out.println(view);
+        return view;
     }
 
     
