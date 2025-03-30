@@ -1,0 +1,53 @@
+[ JDBC ]
+        1. JAVA DATABASES CONNECT : java 데이터베이스 연동
+        2. 현재 java 프로젝트의 jdbc 라이브러리 등록하기
+        3. 프로젝트내 넣어둔 (복사한) mysql-connector-j-9.1.0.jar 파일 오른쪽 클릭 ->
+            가장 하단에 [라이브러리 추가] 클릭
+        4. OK
+
+     3. 계층간의 객체
+      - DAO[ Data access Object ] : 데이터 접근 객체 , 파일/DB에 접근하여 실제 데이터를 가져올 때 사용.
+      - DTO[ Data Transfer Object ] : 데이터 이동 객체 , 파일/DB에 접근하여 가져온 데이터를 VIEW까지 이동하기 위해 사용
+      - VO[ Value Object ] : 값 자체 객체, (읽기모드 / setter없음)
+
+    4. DAO에서 DB연동
+        1. 연동할 JDBC 라이브러리 클래스 로드하기 , 일반 예외처리 필요
+        Class.forName("com.mysql.cj.jdbc.Driver")
+            mysql : com.mysql.cj.jdbc.Driver
+            oracle : oracle.jdbc.OracleDriver
+        2. 지정한 DB서버와 계정정보가 일치 했을때 DB연동을 시도하고 성공시 연동객체를 반환한다.
+        DriverManager.getConnection( "DB SERVER URL", "계정명", "비밀번호");
+            1. DB SERVER URL : jdbc:mysql://ip주소:port번호/db명
+            - 로컬PC기준 : jdbc:mysql://localhost:3306/db명
+            2. 계정명 : root
+            3. 비밀번호 : 1234
+
+    *인터페이스 - 동일한 목적하의 서로 다른 행위/메소드 등 조작(호환)
+
+        키보드(인터페이스) : 모든 게임에서의 A키 B키 C키 존재, 하지만 서로 다른 행위를 함. [각 게임:객체]
+
+    5. JDBC의 핵심 인터페이스 3개
+        1. Connection 인터페이스 : DB와 연동 성공한 객체 정보를 가지고 조작/기능/메서드 제공하는 인터페이스
+                Connection conn = DriverManager.gerConnection(mysql)
+                Connection conn = DriverManager.gerConnection(Oracle)
+                -> 서로 다른 각 DB회사에서 제공하는 클래스(만든사람이 다르므로 클래스는 다르다.)는 다르다.
+                하지만 하나의 인터페이스로 서로 다른 회사의 클래스를 사용/조작 한다.
+
+                (1) PrepareStatment ps = conn.prepareStatement(SQL문자열) : 기재한 SQL를 매개변수로 전달하면 SQL를 조작/기능/메소드 제공하는 객체 반환
+
+        2. PreparedStatement 인터페이스 : 기재된 SQL를 조작/메소드 제공하는 인터페이스
+            (1) ps.setXXX( ?, value)
+            - XXX -> 데이터 타입
+            - 기재된 SQL내 ?의 순서번호
+            - value : 앞 매개변수 ?에 대입할 값
+
+            (2) ps.executeUpdate(), 현재 기재된 SQL를 실행하는 함수
+            (3) ResultSet rs = ps.excuteQuery(), 현재 기재된 SQL를 실행하고 조회된 결과를 반환 함수.
+
+        3. ResultSet 인터페이스 : 실행된 SQL 조회 결과를 조작 하는 인터페이스
+            (1) rs.next() : 조회된 결과의 다음 레코드로 이동하는 함수
+                        만약 다음레코드가 존재하면 true 존재하지 않으면 false
+            (2) rs.getXXX("필드명") : 현재 조회중인 레코드의 지정한 필드명의 값 호출
+                XXX : 호출할 데이터의 타입
+                - rs.getInt("num"); : 'num' 필드값을 int 타입으로 호출
+                - rs.getString("content") : 'content' 필드값을 String 타입으로 호출
