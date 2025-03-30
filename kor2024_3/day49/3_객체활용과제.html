@@ -1,0 +1,48 @@
+<!--
+    JS과제5 (day49) : 객체 활용.
+    - 출력조건 : document.querySelector().innerHTML 
+    - 입력조건 : document.querySelector().value
+    - 일반조건 : chatGPT 사용금지 , 한줄한줄에 대한 코드설명 질문 가능.
+   
+    선택1 (어려운분들) : 회원가입 , 로그인 html/js를 따라치기 5번 , (코드위주)
+    선택2 (활용)
+        1. 회원가입시 아이디 중복검사 , 이미 등록된 아이디 이면 회원가입 실패 , 유효성검사.
+        2. 회원가입시 비밀번호 유효성검사 , 비밀번호는 최소 5 ~ 10 글자 이내로 입력 제한 하시오.
+        3. 로그인시 성공시 상단에 로그인성공한 회원의 닉네임을 출력하시오. 
+            로그인전 : <div class='loginNicName'>  </div>
+            로그인후 : <div class='loginNicName'> ~~님 로그인중. </div>
+        4. 로그인 화면 아래 현재 로그인된 회원들의 명단 출력하시오. 모든 회원[배열] 의 아이디와 닉네임 만 출력하시오.
+        <div class="memberListBox">
+            <h3> 회원명단 </h3>
+        </div>
+-->
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='객체활용과제.js'></script>
+</head>
+<body>
+
+    <div>
+        <h3> 회원가입 </h3>
+        아이디 : <input class="signid" type="text"/><br/>
+        비밀번호 : <input class="signpw" type="password"/><br/>
+        닉네임 : <input class="signnic" type="text"/><br/>
+        <button onclick="signUp()"> 회원가입 </button>
+    </div>
+    
+    <div>
+        <h3> 로그인 </h3>
+        아이디 : <input class="loginid" type="text"/><br/>
+        비밀번호 : <input class="loginpw" type="password"/><br/>
+        <button onclick="login()"> 로그인 </button>
+        
+    </div>
+
+</body>
+</html>
