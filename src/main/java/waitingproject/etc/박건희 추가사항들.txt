@@ -1,0 +1,17 @@
+1. 기존 코드 곳곳에 줄바꿈한 곳이 있는데 이거 때문에 깃 충돌나면은 미안합니다 ^^;
+
+2. Dao의 register 함수
+    [String sql = "insert into user (name,people,phnum) values (?,?,?)";]
+    에서 status는 sql에서 [default false]로 자동 할당이 되기 때문에 dao sql문에서 뺐습니다.
+    그대로 해도 되긴 하는데 그러면 body 전달할때 불필요한 변수를 전달하느라 번거로워질 수 있어서요.
+
+3. 3번 함수 waitingNum 추가했습니다.
+    얘는 좀 특이하게 구성했는데 먼저 dao에서는 status가 0인 레코드들을 골라와서 ArrayList로 만들어 반환합니다.
+    service에서는 받아온 ArrayList의 size를 따서 int 변수로 반환합니다.
+    결론적으로 현재 대기 상태인 팀 수를 int로 전달합니다.
+
+4. 4번 함수 pass 추가했습니다.
+    [status = 0 -> 1] 로 바꾸는 함수로 대기 상태인 팀을 입장 완료 처리하는 함수입니다.
+
+5. 5번 함수 delete 추가했습니다.
+    관리자가 레코드 제거할 수 있게하는 함수입니다.

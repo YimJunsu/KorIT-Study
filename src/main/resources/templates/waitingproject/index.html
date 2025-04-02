@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>웨이팅서비스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div th:replace="~{/waitingproject/header.html :: header}"></div>
+    <div>
+      <h3>웨이팅 서비스 페이지 입니다.</h3>
+
+      <div>
+        <div>이름 : <input type="text" class="nameInput" /></div>
+        <div>인원수 :<input type="text" class="peopleInput" /></div>
+        <div>전화번호 :<input type="text" class="phnumInput" /></div>
+      </div>
+      <button onclick="waiting()">등록</button>
+
+      <div>
+        남은 대기 팀 수:
+        <span class="waitingnumarea"></span>
+      </div>
+    </div>
+    <script src="/waitingproject/waitingproject.js"></script>
+    <script>
+      waitingnum();
+    </script>
+  </body>
+</html>
