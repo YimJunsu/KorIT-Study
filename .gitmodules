@@ -1,0 +1,3 @@
+[submodule "waitingmini"]
+	path = waitingmini
+	url = https://github.com/YimJunsu/waitingmini.git
